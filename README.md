@@ -4,7 +4,7 @@ Name : Rajalakshmi R
 Roll No : 212223110037
 Department : CSE (IOT)
 ```
-# EXPERIMENT--04-INTERFACING IOT DEVELOPMENT BOARD AND CONFIGURE USART FOR TRANSFERRING STRINGS 
+# EXPERIMENT--03 INTERFACING IOT DEVELOPMENT BOARD AND CONFIGURE USART FOR TRANSFERRING STRINGS 
 
 ## Aim: 
 To Interface iot development board for configuring the the usart and transfer strings though it 
