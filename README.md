@@ -1,13 +1,17 @@
-
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
-
+```
+DATE: 16/9/2024
+NAME: Rajalakshmi R
+ROLL NO :212223110037
+DEPARTMENT: CSE (IOT)
+```
 # EXPERIMENT--04-INTERFACING IOT DEVELOPMENT BOARD AND CONFIGURE USART FOR TRANSFERRING STRINGS 
-## Aim: To Interface iot development board for configuring the the usart and transfer strings though it 
-## Components required: STM32 CUBE IDE, ARM IOT development board,  STM programmer tool, Serial port utility tool 
+
+## Aim: 
+To Interface iot development board for configuring the the usart and transfer strings though it 
+
+## Components required: 
+STM32 CUBE IDE, ARM IOT development board,  STM programmer tool, Serial port utility tool 
+
 ## Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
 
@@ -42,11 +46,30 @@ configure in the usart 2 as asynchronous mode and set the baud rate as 115200 as
 
 
 ## STM 32 CUBE PROGRAM :
+```
+#if defined (__ICCARM__) || defined (__ARMCC_VERSION)
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#elif defined(__GNUC__)
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif
+
+ while (1)
+  {
+	  printf("your roll no and dept ");
+HAL_Delay(1000);
+   
+  }
 
 
-
+PUTCHAR_PROTOTYPE
+{
+	HAL_UART_Transmit(&huart2,(uint8_t*)&ch,1,0xFFFF);
+	return ch;
+}
+```
 ## Output screen shots of Serial port utility   :
  
+![Screenshot 2024-09-16 092338](https://github.com/user-attachments/assets/23c82028-f6b6-425c-9b9e-dc0017156ce9)
  
  
  
